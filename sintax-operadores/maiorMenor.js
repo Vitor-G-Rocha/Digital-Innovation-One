@@ -1,4 +1,6 @@
 function operadores(x, y){ //Funcao com 2 parametros
+    if(!x || !y) { return "Entre com 2 números!" }
+    if(!(typeof x == 'number') || !(typeof y == 'number')) { return "Algum dos parâmetros não é um número!" }
     let igualdade;
     let maiorMenor10;
     let maiorMenor20
@@ -19,7 +21,7 @@ function operadores(x, y){ //Funcao com 2 parametros
             maiorMenor20 = "maior";
         } 
     }    
-    console.log(`Os números ${x} e ${y} ${igualdade} iguais. Sua soma é ${x + y}, que é ${maiorMenor10} que 10 e ${maiorMenor20} que 20`);
+    return `Os números ${x} e ${y} ${igualdade} iguais. Sua soma é ${x + y}, que é ${maiorMenor10} que 10 e ${maiorMenor20} que 20`;
 }
 
-operadores(1, 2)
+console.log(operadores(2, 2))
